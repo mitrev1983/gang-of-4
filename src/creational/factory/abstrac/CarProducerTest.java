@@ -3,7 +3,7 @@ package creational.factory.abstrac;
 import java.util.Date;
 
 public class CarProducerTest {
-    private AbstractVehicleFactory abstractCarFactory;
+    private final AbstractVehicleFactory abstractCarFactory;
 
     public CarProducerTest(AbstractVehicleFactory abstractCarFactory) {
         this.abstractCarFactory = abstractCarFactory;
@@ -25,6 +25,4 @@ public class CarProducerTest {
         Truck truck = test.newTruck("Diesel", new Date());
         System.out.println("Truck:" + truck);
     }
-
-
 }
