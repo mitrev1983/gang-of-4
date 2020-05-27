@@ -1,0 +1,10 @@
+# Default ignored files
+/workspace.xml
+/.gitignore
+/../gang-of-4.iml
+/misc.xml
+/modules.xml
+/vcs.xml
+/gang-of-4.iml
+/out/**
+/.idea/**
