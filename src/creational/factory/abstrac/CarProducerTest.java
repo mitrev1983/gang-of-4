@@ -3,24 +3,27 @@ package creational.factory.abstrac;
 import java.util.Date;
 
 public class CarProducerTest {
-    private AbstractCarFactory abstractCarFactory;
+    private AbstractVehicleFactory abstractCarFactory;
 
-    public CarProducerTest(AbstractCarFactory abstractCarFactory) {
+    public CarProducerTest(AbstractVehicleFactory abstractCarFactory) {
         this.abstractCarFactory = abstractCarFactory;
     }
 
-    private Car newCar(String diesel, Date productionDate) {
-        return abstractCarFactory.create(diesel, productionDate);
+    private Car newCar(String engineType, Date productionDate, Car.CarType carType) {
+        return abstractCarFactory.createCar(engineType, productionDate, carType);
+    }
+
+    public Truck newTruck(String engineType, Date productionDate) {
+        return abstractCarFactory.createTruck(engineType, productionDate);
     }
 
     public static void main(String[] args) {
-        CarProducerTest test1 = new CarProducerTest(new AudiCarFactory());
-        Car car1 = test1.newCar("Diesel", new Date());
-        System.out.println("Car 1:" + car1);
+        CarProducerTest test = new CarProducerTest(new VehicleFactory());
+        Car car1 = test.newCar("Diesel", new Date(), Car.CarType.Audi);
+        System.out.println("Car:" + car1);
 
-        CarProducerTest test2 = new CarProducerTest(new MercedesCarFactory());
-        Car car2 = test2.newCar("Petrol", new Date());
-        System.out.println("Car 2:" + car2);
+        Truck truck = test.newTruck("Diesel", new Date());
+        System.out.println("Truck:" + truck);
     }
 
 

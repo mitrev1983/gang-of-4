@@ -3,6 +3,10 @@ package creational.factory.abstrac;
 import java.util.Date;
 
 public class Car {
+    enum CarType {
+        Audi, Mercedes
+    }
+
     String engineType;
     Date productionDate;
 

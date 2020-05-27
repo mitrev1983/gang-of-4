@@ -2,13 +2,15 @@ package creational.factory.abstrac;
 
 import java.util.Date;
 
-public class Audi extends Car {
-
+public class Truck {
     private String name;
+    private String engineType;
+    Date productionDate;
 
-    public Audi(String engineType, Date productionDate) {
-        super(engineType, productionDate);
-        this.name = "Audi";
+    public Truck(String engineType, Date productionDate) {
+        this.engineType = engineType;
+        this.productionDate = productionDate;
+        this.name = "Truck Volvo";
     }
 
     public String getName() {
@@ -21,7 +23,7 @@ public class Audi extends Car {
 
     @Override
     public String toString() {
-        return "Audi{" +
+        return "Truck{" +
                 "model='" + name + '\'' +
                 ", engineType='" + engineType + '\'' +
                 ", productionDate=" + productionDate +

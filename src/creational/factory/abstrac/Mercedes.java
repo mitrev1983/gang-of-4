@@ -25,7 +25,7 @@ public class Mercedes extends Car {
                 "model='" + name + '\'' +
                 ", engineType='" + engineType + '\'' +
                 ", productionDate=" + productionDate +
-                "} " + super.toString();
+                "} ";
     }
 }
 
